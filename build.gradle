@@ -1,7 +1,12 @@
+plugins {
+	id 'java'
+	id 'application'
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-version = '1.0.0'
+version = '2.1.2'
 sourceCompatibility = 1.8
 
 repositories {
@@ -17,3 +22,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+run {
+	standardInput = System.in
+}
+
+mainClassName = 'racingcar.Application'
